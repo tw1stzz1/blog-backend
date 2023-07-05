@@ -1,26 +1,20 @@
 {% extends 'blog-base.html' %}
 {% load static %}
-{% block title %}
-<title>{{ post.title }} - Blog Details</title>
-{% endblock %}
+{% block title %}<title>{{ post.title }} - Blog Details</title>{% endblock %}
+{% block banner %}
+<div class="hero-banner hero-banner--sm">
+  <div class="hero-banner__content">
+  <h1>Blog details</h1>
+  <nav aria-label="breadcrumb" class="banner-breadcrumb">
+      <ol class="breadcrumb">
+      <li class="breadcrumb-item"><a href="#">Home</a></li>
+      <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
+      </ol>
+  </nav>
+  </div>
+</div>
+{% endblock %} 
 {% block content %}
-    <!--================ Hero sm Banner start =================-->      
-    <section class="mb-30px">
-      <div class="container">
-      <div class="hero-banner hero-banner--sm">
-          <div class="hero-banner__content">
-          <h1>Blog details</h1>
-          <nav aria-label="breadcrumb" class="banner-breadcrumb">
-              <ol class="breadcrumb">
-              <li class="breadcrumb-item"><a href="#">Home</a></li>
-              <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
-              </ol>
-          </nav>
-          </div>
-      </div>
-      </div>
-  </section>
-  <!--================ Hero sm Banner end =================-->
   <!--================ Start Blog Post Area =================-->
   <section class="blog-post-area section-margin">
     <div class="container">
