@@ -2,17 +2,17 @@
 {% load static %}
 {% block title %}<title>{{ post.title }} - Blog Details</title>{% endblock %}
 {% block banner %}
-<div class="hero-banner hero-banner--sm">
-  <div class="hero-banner__content">
-  <h1>Blog details</h1>
-  <nav aria-label="breadcrumb" class="banner-breadcrumb">
-      <ol class="breadcrumb">
-      <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
-      <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
-      </ol>
-  </nav>
+  <div class="hero-banner hero-banner--sm">
+    <div class="hero-banner__content">
+    <h1>Blog details</h1>
+    <nav aria-label="breadcrumb" class="banner-breadcrumb">
+        <ol class="breadcrumb">
+        <li class="breadcrumb-item"><a href="{% url 'index' %}">Home</a></li>
+        <li class="breadcrumb-item active" aria-current="page">Blog Details</li>
+        </ol>
+    </nav>
+    </div>
   </div>
-</div>
 {% endblock %} 
 {% block content %}
   <!--================ Start Blog Post Area =================-->
@@ -51,25 +51,25 @@
           
 
                 <div class="comments-area">
-                    <h4>{{post.comments|length}} Comments</h4>
-                    <div class="comment-list">
-                      {% for comment in post.comments %}
-                        <div class="single-comment justify-content-between d-flex">
-                            <div class="user justify-content-between d-flex">
-                                <div class="desc">
-                                    <h5><a href="#">{{comment.author}}</a></h5>
-                                    <p class="date">{{comment.published_at}} </p>
-                                    <p class="comment">
-                                      {{comment.text}}
-                                    </p>
-                                </div>
-                            </div>
-                            <div class="reply-btn">
-                                    <a href="" class="btn-reply text-uppercase">reply</a> 
-                            </div>
+                  <h4>{{post.comments|length}} Comments</h4>
+                  <div class="comment-list">
+                    {% for comment in post.comments %}
+                      <div class="single-comment justify-content-between d-flex">
+                        <div class="user justify-content-between d-flex">
+                          <div class="desc">
+                            <h5><a href="#">{{comment.author}}</a></h5>
+                              <p class="date">{{comment.published_at}} </p>
+                              <p class="comment">
+                                {{comment.text}}
+                              </p>
+                          </div>
                         </div>
-                      {% endfor %}
-                      </div>                                            				
+                          <div class="reply-btn">
+                            <a href="" class="btn-reply text-uppercase">reply</a> 
+                          </div>
+                      </div>
+                    {% endfor %}
+                  </div>                                            				
                 </div>
         </div>
 
