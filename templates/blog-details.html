@@ -1,6 +1,8 @@
 {% extends 'blog-base.html' %}
 {% load static %}
-{% block title %}<title>{{ post.title }} - Blog Details</title>{% endblock %}
+{% block title %}
+  <title>{{ post.title }} - Blog Details</title>
+{% endblock %}
 {% block banner %}
   <div class="hero-banner hero-banner--sm">
     <div class="hero-banner__content">
@@ -57,10 +59,10 @@
                   <div class="user justify-content-between d-flex">
                     <div class="desc">
                       <h5><a href="#">{{comment.author}}</a></h5>
-                        <p class="date">{{comment.published_at}} </p>
-                        <p class="comment">
-                          {{comment.text}}
-                        </p>
+                      <p class="date">{{comment.published_at}} </p>
+                      <p class="comment">
+                        {{comment.text}}
+                      </p>
                     </div>
                   </div>
                   <div class="reply-btn">
